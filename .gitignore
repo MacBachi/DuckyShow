@@ -1,0 +1,16 @@
+# Build Artifacts
+/build/
+/dist/
+/target/
+*.log
+*.lock
+*.swp
+
+# macOS-spezifische Dateien
+.DS_Store
+.localized
+.AppleDouble
+.LSOverride
+
+# Editor-spezifische Dateien (z.B. VS Code)
+.vscode/

