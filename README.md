@@ -18,8 +18,6 @@ This repository contains a collection of scripts (e.g., for BadUSB devices like 
 3) Deploy the payload on a machine that you own or have explicit permission to test on.
 
 ## Tools & Resources
-Here are some useful links to help you get started with compiling and deploying these scripts.
-
 Hak5 Payload Studio: An online tool for compiling DuckyScript 1.0/2.0/3.0 payloads for the USB Rubber Ducky and other BadUSB devices.
 
 https://payloadstudio.com
